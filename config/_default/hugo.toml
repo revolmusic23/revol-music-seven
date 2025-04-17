@@ -1,7 +1,7 @@
 baseURL = "https://hugoseven.netlify.app"
 
 hasCJKLanguage = true
-defaultContentLanguage = "zh-hans"
+defaultContentLanguage = "zh-hant"
 
 enableGitInfo = true
 enableEmoji = true

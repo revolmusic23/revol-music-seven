@@ -1,18 +1,15 @@
 [[main]]
-  name = "文档"
+  name = "文檔"
   pageRef = "docs"
   weight = 10
-
 [[main]]
-  name = "博文"
+  name = "部落格"
   pageRef = "posts"
   weight = 20
-
 [[main]]
-  name = "归档"
+  name = "歸檔"
   pageRef = "archive"
   weight = 30
-
 [[main]]
   name = "其他"
   weight = 40
@@ -24,7 +21,7 @@
   weight = 10
 [[main]]
   identifier = "comments-with-twikoo"
-  name = "Twikoo评论版"
+  name = "Twikoo評論版"
   url = "https://seven-demo-with-twikoo.netlify.app/"
   parent = '其他'
   weight = 20

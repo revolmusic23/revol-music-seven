@@ -1,0 +1,9 @@
+languageCode = "zh-hant"
+languageName = "繁體中文"
+title = "Seven 主題"
+weight = 1
+
+[params]
+  description = "一款簡潔、漂亮的 HUGO 部落格主題"
+  omitCategoryOnMenu = false
+  categoryName = "分類"
