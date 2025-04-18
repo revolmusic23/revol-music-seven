@@ -71,8 +71,8 @@
   enablePageView = true
 
 [comment]
-  enable = true
-  enableCounts = true  # Note: only works if waline or twikoo is enabled.
+  # enable = true
+  # enableCounts = true  # Note: only works if waline or twikoo is enabled.
   [comment.waline]
     enable = true
     serverURL = "https://hugoseven-waline.netlify.app/.netlify/functions/comment"
