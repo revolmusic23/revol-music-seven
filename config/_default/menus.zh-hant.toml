@@ -10,6 +10,11 @@
   name = "Archive"
   pageRef = "archive"
   weight = 30
+[[main]]
+  name = "作品"
+  pageRef = "works"
+  weight = 40
+
 # [[main]]
 #   name = "其他"
 #   weight = 40
