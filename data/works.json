@@ -1,0 +1,15 @@
+{
+  "work": [
+    {
+      "title": "Camego Band - 同在同行",
+      "date": "2022-12-12",
+      "participate": "參與編曲、混音、電吉他錄音、弦樂編寫",
+      "image": "/works/20221212-同在同行/be-together-mv.jpeg",
+      "slug": "be-together",
+      "type": ["rock"],
+      "audio": "/works/20221212-同在同行/20221212_同在同行_MMM.mp3",
+      "instrumental": "/works/20221212-同在同行/20221212_同在同行_MMA.mp3",
+      "youtube": "IzLsb9uewec"
+    }
+  ]
+}

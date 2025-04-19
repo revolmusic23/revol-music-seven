@@ -12,17 +12,66 @@
             {{ end }}
             <p class="hs-instruction-title text-2xl font-bold">{{ .Title }}</p>
           </div>
-
           <div class="hs-instruction format py-5 dark:format-invert format-a:text-[--hs-text-color-hover] dark:text-gray-400">
             {{ .Content }}
           </div>
           <span class="h-px w-full max-w-4xl bg-gray-300 dark:bg-gray-600"></span>
         </div>
       {{ end }}
-      {{ range .Paginator.Pages }}
-        {{ partial "works_li_page.html" . }}
+
+
+      <!-- 從 JSON 資源讀取數據 -->
+      <!-- {{ with .Resources.GetMatch .Params.data }}
+        {{ $worksData := . | transform.Unmarshal }}
+        {{ with $worksData.work }}
+          {{ range . }}
+            <li x-data="{ isLoaded: false }" class="items-stretch" x-intersect.threshold.30="isLoaded = true">
+              <div x-show="!isLoaded" x-cloak class="h-56 w-full bg-transparent"></div>
+              <div x-show="isLoaded" x-cloak class="{{ $.Site.Params.styles.cardClass }} p-0">
+                <div class="aspect-square w-full overflow-hidden">
+                  {{ if .image }}
+                    <div x-show="!isLoaded" x-cloak class="h-full w-full bg-transparent"></div>
+                    <img x-show="isLoaded" x-cloak src="{{ .image }}" alt="{{ .title }}" loading="lazy" decoding="async" class="h-full w-full object-cover" />
+                  {{ end }}
+                </div>
+                <div class="px-4 py-6 sm:p-6">
+                  <p class="hs-content-meta block text-xs text-gray-600 dark:text-gray-400">
+                    {{ .date }}
+                  </p>
+                  <a href="/works/{{ .slug }}/">
+                    <p class="hs-content-title mt-2 text-lg text-center text-gray-900 group-hover:text-[--hs-text-color-hover] dark:text-gray-300">
+                      {{ .title }}
+                    </p>
+                  </a>
+                  {{ if .participate }}
+                    <p class="mt-2 text-sm text-gray-600 dark:text-gray-400">
+                      {{ .participate }}
+                    </p>
+                  {{ end }}
+                </div>
+              </div>
+            </li>
+          {{ end }}
+        {{ end }}
+      {{ end }}
+       -->
+
+      <!-- {{ with .Resources.GetMatch .Params.data }}
+        {{ $worksData := . | transform.Unmarshal }}
+        {{ with $worksData.work }}
+          {{ range . }}
+            {{ partial "works_li_page.html" (dict "context" .) }}
+          {{ end }}
+        {{ end }}
+      {{ end }}
+       -->
+
+      {{ range site.Data.works.work }}
+        {{ partial "works_li_page.html" (dict "context" .) }}
       {{ end }}
     </ul>
-    {{ partial "pagination.html" . }}
+
+    <!-- 分頁導航（可選，取決於您是否需要分頁） -->
+    <!-- {{ partial "pagination.html" . }} -->
   </div>
 {{ end }}
