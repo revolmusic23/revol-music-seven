@@ -1,0 +1,55 @@
+{{ $src := .src }}
+{{ $class := .class | default "" }}
+{{ $caption := .caption | default "" }}
+{{ $description := .description | default "" }}
+{{ $preload := .preload | default "metadata" }}
+{{ $context := .context | default false }}
+
+
+<figure {{ if $class }}class="{{ $class }}"{{ end }}>
+  {{ if $caption }}<figcaption class="caption font-color-white">{{ $caption }}</figcaption>{{ end }}
+  {{ if $description }}<figcaption class="description">{{ $description }}</figcaption>{{ end }}
+  <audio controls preload="{{ $preload }}" style="width: 100%;">
+    {{ if $src }}<source src="{{ $src | relURL }}" type="audio/mpeg" />{{ end }}
+  </audio>
+</figure>
+
+<!-- 只在第一次使用此 partial 時加入以下腳本和樣式 -->
+{{ if and $context (not ($context.Scratch.Get "audioScriptAdded")) }}
+  {{ $context.Scratch.Set "audioScriptAdded" true }}
+  <script>
+    document.addEventListener(
+      "play",
+      function (e) {
+        var audios = document.getElementsByTagName("audio");
+        for (var i = 0, len = audios.length; i < len; i++) {
+          if (audios[i] != e.target) {
+            audios[i].pause();
+          }
+        }
+      },
+      true,
+    );
+  </script>
+{{ end }}
+
+
+<!-- 每次都添加樣式，以確保適當的寬度 -->
+<style type="text/css">
+  .caption {
+    font-size: 20px;
+    color: black;
+    /* padding-bottom: 20px; */
+  }
+  .description {
+    font-size: 16px;
+    color: black;
+    padding-bottom: 20px;
+    margin-top: -20px;
+  }
+  audio {
+    /* padding-top: 20px; */
+    /* margin-top: 20px; */
+    width: 100%;
+  }
+</style>

@@ -1,40 +1,42 @@
 <figure {{ with .Get "class" }}class="{{ . }}"{{ end }}>
-    {{ with .Get "caption" }}<figcaption class="caption font-color-white">{{ . }}</figcaption>{{ end }}
-    {{ with .Get "description" }}<figcaption class="description">{{ . }}</figcaption>{{ end }}
-    <audio controls preload="{{ .Get "preload" | default "metadata" }}" >
-      {{ with .Get "src" }}<source src="{{ . | relURL }}" type="audio/mpeg">{{ end }}
-    </audio>
+  {{ with .Get "caption" }}<figcaption class="caption font-color-white">{{ . }}</figcaption>{{ end }}
+  {{ with .Get "description" }}<figcaption class="description">{{ . }}</figcaption>{{ end }}
+  <audio controls preload="{{ .Get "preload" | default "metadata" }}">
+    {{ with .Get "src" }}<source src="{{ . | relURL }}" type="audio/mpeg" />{{ end }}
+  </audio>
 </figure>
-
 
 <!-- If I start this audio, pause other audio. -->
 <script>
-    document.addEventListener('play', function(e){  
-        var audios = document.getElementsByTagName('audio');  
-        for(var i = 0, len = audios.length; i < len;i++){  
-            if(audios[i] != e.target){  
-                audios[i].pause();  
-            }  
-        }  
-    }, true);
+  document.addEventListener(
+    "play",
+    function (e) {
+      var audios = document.getElementsByTagName("audio");
+      for (var i = 0, len = audios.length; i < len; i++) {
+        if (audios[i] != e.target) {
+          audios[i].pause();
+        }
+      }
+    },
+    true,
+  );
 </script>
 
-
 <style type="text/css">
-    .caption { 
-        font-size: 20px;
-        color: black;
-        /* padding-bottom: 20px; */
-    }
-    .description { 
-        font-size: 16px;
-        color: black;
-        padding-bottom: 20px; 
-        margin-top: -20px;
-    }
-    audio { 
-        /* padding-top: 20px; */
-        /* margin-top: 20px; */
-        width: 100%; 
-    }
+  .caption {
+    font-size: 20px;
+    color: black;
+    /* padding-bottom: 20px; */
+  }
+  .description {
+    font-size: 16px;
+    color: black;
+    padding-bottom: 20px;
+    margin-top: -20px;
+  }
+  audio {
+    /* padding-top: 20px; */
+    /* margin-top: 20px; */
+    width: 100%;
+  }
 </style>

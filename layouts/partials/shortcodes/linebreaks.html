@@ -1,0 +1,16 @@
+{{ $content := trim .content "\n" }}
+{{ $lines := split $content "\n" }}
+{{ if len $lines | eq 0 }}
+  {{/* 如果沒有內容 */}}
+{{ else }}
+  {{/* 輸出第一行，不加<br/> */}}
+  {{ index $lines 0 | safeHTML }}
+  {{/* 從第二行開始，每行前加<br/> */}}
+  {{ range $i, $line := after 1 $lines }}
+    <br />
+    {{ $line | safeHTML }}
+  {{ end }}
+  {{/* 在最後添加一個額外的<br/> */}}
+  <br />
+  <br />
+{{ end }}
