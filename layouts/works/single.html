@@ -38,22 +38,8 @@
 
       {{/* Content */}}
       <div id="hs-container" class="md:w-2/3">
-        <div class="{{ .Site.Params.styles.cardClass }} py-5 p-4">
+        <div class="{{ .Site.Params.styles.cardClass }} p-6">
           <div class="flex w-full flex-col">
-            <div
-              class="hs-content-meta flex flex-row flex-wrap items-center space-x-1 pb-2 pt-1 text-xs font-normal tracking-wide text-gray-500/90 dark:text-gray-500">
-              {{ $categories := (.GetTerms "categories") }}
-              <span class="hs-content-category flex flex-row gap-1">
-                {{ range $categories }}
-                  <span class="italic text-red-700">></span>
-                  <a
-                    class="hover:text-[--hs-text-color-hover] hover:underline hover:decoration-[--decoration-color] hover:underline-offset-4"
-                    href="{{ .Permalink }}">
-                    {{- .LinkTitle -}}
-                  </a>
-                {{ end }}
-              </span>
-            </div>
             <div id="hs-content-title" class="hs-content-title py-1 text-start text-3xl font-bold tracking-wide text-black dark:text-white lg:text-4xl">
               {{ .Title }}
             </div>
@@ -66,6 +52,45 @@
           <div
             id="hs-content"
             class="hs-content format mx-auto mt-6 max-w-none dark:format-invert md:format-base format-figure:flex format-figure:flex-col format-figure:items-center format-img:cursor-zoom-in dark:text-gray-300 lg:mt-11">
+            {{ if .Params.music }}
+              <h2>音檔</h2>
+              {{- partial "shortcodes/audio.html" (dict "src" .Params.music "context" .) -}}
+            {{ end }}
+
+            {{ if .Params.inst }}
+              <h2>伴奏檔</h2>
+              {{- partial "shortcodes/audio.html" (dict "src" .Params.inst "context" .) -}}
+            {{ end }}
+
+            {{ if .Params.lyrics }}
+              <div class="">
+                <h2>歌詞</h2>
+                {{ $lyricsPath := .Params.lyrics }}
+                {{ $lyricsContent := $lyricsPath }}
+
+
+                <!-- 如果是檔案路徑且存在，則讀取檔案內容 -->
+                {{ if hasPrefix $lyricsPath "/" }}
+                  {{ $staticPath := printf "static%s" $lyricsPath }}
+                  {{ if fileExists $staticPath }}
+                    {{ $lyricsContent = readFile $staticPath }}
+                  {{ end }}
+                {{ end }}
+
+
+                <!-- 輸出歌詞內容 -->
+                {{- partial "shortcodes/linebreaks.html" (dict "content" $lyricsContent) -}}
+              </div>
+            {{ end }}
+
+            {{ if .Params.mv }}
+              <div class="mt-4">
+                <h2>MV</h2>
+                {{ $mvID := .Params.mv }}
+                {{- partial "shortcodes/youtube.html" (dict "id" $mvID) -}}
+              </div>
+            {{ end }}
+
             {{ .Content }}
           </div>
 
@@ -151,12 +176,5 @@
   {{ end }}
 
 
-  <script>
-    function toComment() {
-      window.scrollTo({
-        top: document.getElementById("hs-comment").offsetTop - 100,
-        behavior: "smooth",
-      });
-    }
-  </script>
+  <script></script>
 {{ end }}

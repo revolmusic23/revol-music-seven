@@ -177,17 +177,11 @@ pre {
 }
 
 /* flowbite-typography 引用语法修改 */
-.format
-  :where(blockquote p:first-of-type):not(
-    :where([class~="not-format"] *)
-  )::before {
+.format :where(blockquote p:first-of-type):not(:where([class~="not-format"] *))::before {
   content: "" !important;
 }
 
-.format
-  :where(blockquote p:last-of-type):not(
-    :where([class~="not-format"] *)
-  )::after {
+.format :where(blockquote p:last-of-type):not(:where([class~="not-format"] *))::after {
   content: "" !important;
 }
 
@@ -196,10 +190,7 @@ pre {
   background-image: none !important;
 }
 
-.format
-  :where(blockquote):not(
-    :where([class~="not-format"], [class~="not-format"] *)
-  ) {
+.format :where(blockquote):not(:where([class~="not-format"], [class~="not-format"] *)) {
   font-weight: 500;
   font-style: italic;
   color: var(--tw-format-quotes);
