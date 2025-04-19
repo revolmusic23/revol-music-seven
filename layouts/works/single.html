@@ -12,15 +12,14 @@
 {{- end -}}
 {{ define "main" }}
   {{ $metaInfo := .Site.Params.articleMeta }}
-  {{ $image := resources.Get .Params.image }}
 
-  {{ if $image }}
+  {{ if .Params.image }}
     <div id="hs-feature" class="h-60 w-full md:h-120">
       <img
         x-data="{ isGradient: {{ $metaInfo.disableImgGradient | default false }} }"
         :class="{ 'image-gradient': !isGradient }"
         class="h-60 w-full object-cover md:h-120"
-        src="{{ $image.Permalink }}"
+        src="{{ .Params.image }}"
         alt="Hero Image of content"
         srcset="" />
     </div>

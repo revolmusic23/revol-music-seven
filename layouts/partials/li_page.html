@@ -8,19 +8,19 @@
     x-cloak
     class="group h-full animate-slideTop overflow-hidden rounded-md bg-white/50 shadow-[0_7px_29px_0_rgba(100,100,111,0.2)] backdrop-blur-md transition hover:shadow-md dark:bg-gray-800/70 dark:shadow-[0_5px_15px_rgba(0,0,0,0.35)]">
     <div class="h-64 w-full md:h-48">
-      {{ with resources.Get .Params.image }}
-        <div
-          x-show="!isLoaded"
-          x-cloak
-          class="h-full w-full bg-transparent"></div>
-        <img
-          x-show="isLoaded"
-          x-cloak
-          :src="'{{ .Permalink }}'"
-          :alt="'{{ .Title }}'"
-          loading="lazy"
-          decoding="async"
-          class="h-full w-full object-cover" />
+      {{ if .Params.image }}
+      <div
+        x-show="!isLoaded"
+        x-cloak
+        class="h-full w-full bg-transparent"></div>
+      <img
+        x-show="isLoaded"
+        x-cloak
+        src="{{ .Params.image }}"
+        alt="{{ .Title }}"
+        loading="lazy"
+        decoding="async"
+        class="h-full w-full object-cover" />
       {{ end }}
     </div>
 
