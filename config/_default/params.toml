@@ -68,7 +68,7 @@
   disableImgGradient = false
 
   # Note: only works if waline or twikoo is enabled.
-  enablePageView = true
+  # enablePageView = true
 
 [comment]
   # enable = true
@@ -116,3 +116,6 @@
   [analytics.goatcounter]
     enable = true
     code = "seven-demo"  
+
+[styles]
+  cardClass = "rounded-md bg-white/50 shadow-[0_7px_29px_0_rgba(100,100,111,0.2)] backdrop-blur-md transition dark:bg-gray-800/70 dark:shadow-[0_5px_15px_rgba(0,0,0,0.35)]"
