@@ -1,7 +1,4 @@
-<li
-  x-data="{ isLoaded: false }"
-  class="items-stretch"
-  x-intersect.threshold.30="isLoaded = true">
+<li x-data="{ isLoaded: false }" class="items-stretch" x-intersect.threshold.30="isLoaded = true">
   <div x-show="!isLoaded" x-cloak class="h-56 w-full bg-transparent"></div>
   <a href="{{ .Permalink }}">
     <div
@@ -10,31 +7,20 @@
       class="group h-full animate-slideTop overflow-hidden rounded-md bg-white/50 shadow-[0_7px_29px_0_rgba(100,100,111,0.2)] backdrop-blur-md transition hover:shadow-md dark:bg-gray-800/70 dark:shadow-[0_5px_15px_rgba(0,0,0,0.35)]">
       <div class="aspect-square w-full overflow-hidden">
         {{ if .Params.image }}
-        <div
-          x-show="!isLoaded"
-          x-cloak
-          class="h-full w-full bg-transparent"></div>
-        <img
-          x-show="isLoaded"
-          x-cloak
-          src="{{ .Params.image }}"
-          alt="{{ .Title }}"
-          loading="lazy"
-          decoding="async"
-          class="h-full w-full object-cover" />
+          <div x-show="!isLoaded" x-cloak class="h-full w-full bg-transparent"></div>
+          <img x-show="isLoaded" x-cloak src="{{ .Params.image }}" alt="{{ .Title }}" loading="lazy" decoding="async" class="h-full w-full object-cover" />
         {{ end }}
       </div>
 
       <div class="px-4 py-6 sm:p-6">
-          <p
-            class="hs-content-title text-lg text-center text-gray-900 group-hover:text-[--hs-text-color-hover] dark:text-gray-300">
-            {{ .Title }}
+        <p class="hs-content-title text-lg text-center text-gray-900 group-hover:text-[--hs-text-color-hover] dark:text-gray-300">
+          {{ .Title }}
+        </p>
+        {{ if .Params.participate }}
+          <p class="mt-2 text-sm text-center text-gray-600 dark:text-gray-400">
+            {{ .Params.participate }}
           </p>
-          {{ if .Params.participate }}
-            <p class="mt-2 text-sm text-center text-gray-600 dark:text-gray-400">
-              {{ .Params.participate }}
-            </p>
-          {{ end }}
+        {{ end }}
       </div>
     </div>
   </a>
