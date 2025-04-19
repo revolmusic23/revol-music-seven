@@ -7,8 +7,13 @@
       class="group h-full animate-slideTop overflow-hidden rounded-md bg-white/50 shadow-[0_7px_29px_0_rgba(100,100,111,0.2)] backdrop-blur-md transition hover:shadow-md dark:bg-gray-800/70 dark:shadow-[0_5px_15px_rgba(0,0,0,0.35)]">
       <div class="aspect-square w-full overflow-hidden">
         {{ if .Params.image }}
+          {{ $dataPath := .Params.dataPath | default "" }}
+          {{ $imagePath := .Params.image }}
+          {{ if and $dataPath (not (hasPrefix $imagePath "http")) }}
+            {{ $imagePath = printf "%s/%s" $dataPath $imagePath }}
+          {{ end }}
           <div x-show="!isLoaded" x-cloak class="h-full w-full bg-transparent"></div>
-          <img x-show="isLoaded" x-cloak src="{{ .Params.image }}" alt="{{ .Title }}" loading="lazy" decoding="async" class="h-full w-full object-cover" />
+          <img x-show="isLoaded" x-cloak src="{{ $imagePath }}" alt="{{ .Title }}" loading="lazy" decoding="async" class="h-full w-full object-cover" />
         {{ end }}
       </div>
 

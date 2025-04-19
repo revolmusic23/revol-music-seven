@@ -12,6 +12,7 @@
 {{- end -}}
 {{ define "main" }}
   {{ $metaInfo := .Site.Params.articleMeta }}
+  {{ $dataPath := .Params.dataPath }}
 
 
   <div id="hs-content-container" class="my-5 w-full rounded-b-lg px-5 md:px-10 lg:px-1">
@@ -21,7 +22,7 @@
         <div class="{{ .Site.Params.styles.cardClass }} p-4 top-0 sticky">
           {{ if .Params.image }}
             <div id="hs-feature" class="aspect-square w-full">
-              <img class="w-full object-cover" src="{{ .Params.image }}" alt="Hero Image of content" srcset="" />
+              <img class="w-full object-cover" src="{{ $dataPath }}/{{ .Params.image }}" alt="Hero Image of content" srcset="" />
             </div>
           {{ else }}
             <div id="hs-feature" class="h-full w-full">
@@ -54,18 +55,19 @@
             class="hs-content format mx-auto mt-6 max-w-none dark:format-invert md:format-base format-figure:flex format-figure:flex-col format-figure:items-center format-img:cursor-zoom-in dark:text-gray-300 lg:mt-11">
             {{ if .Params.music }}
               <h2>音檔</h2>
-              {{- partial "shortcodes/audio.html" (dict "src" .Params.music "context" .) -}}
+              {{- partial "shortcodes/audio.html" (dict "src" (printf "%s/%s" $dataPath .Params.music)) -}}
             {{ end }}
 
             {{ if .Params.inst }}
               <h2>伴奏檔</h2>
-              {{- partial "shortcodes/audio.html" (dict "src" .Params.inst "context" .) -}}
+              <!-- {{- partial "shortcodes/audio.html" (dict "src" .Params.inst "context" .) -}} -->
+              {{- partial "shortcodes/audio.html" (dict "src" (printf "%s/%s" $dataPath .Params.inst)) -}}
             {{ end }}
 
             {{ if .Params.lyrics }}
               <div class="">
                 <h2>歌詞</h2>
-                {{ $lyricsPath := .Params.lyrics }}
+                {{ $lyricsPath := printf "%s/%s" $dataPath .Params.lyrics }}
                 {{ $lyricsContent := $lyricsPath }}
 
 
