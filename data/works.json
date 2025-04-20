@@ -36,6 +36,35 @@
       "inst": "Be-a-Hero_MMA.mp3",
       "lyrics": "be-a-hero_歌詞.md",
       "ytid": "IfcPsiGd7ac"
+    },
+    {
+      "title": "Camego Band - 勇敢的冒險",
+      "date": "2023-06-15",
+      "participate": "參與編曲、混音、電吉他錄音",
+      "slug": "brave-adventure",
+      "dataPath": "/works/20230615-勇敢的冒險",
+      "image": "brave-adventure.png",
+      "inst": "勇敢的冒險_mastering_v1.0.mp3",
+      "lyrics": "勇敢的冒險-歌詞.md"
+    },
+    {
+      "title": "Go Ahead",
+      "date": "2023-07-15",
+      "participate": "參與編曲、混音、電吉他錄音",
+      "slug": "go-ahead",
+      "dataPath": "/works/20230715-go-ahead",
+      "image": "go-ahead.png",
+      "music": "Go-Ahead_mastering_v1.1.mp3",
+      "inst": "Go-Ahead_mastering_v1.1_inst.mp3"
+    },
+    {
+      "title": "Zootopia Opening (Demo)",
+      "date": "2022-09-03",
+      "participate": "參與編曲、混音、電吉他錄音",
+      "slug": "zootopia-opening",
+      "dataPath": "/works/20220903-zootopia",
+      "image": "zootopia.png",
+      "music": "Zootopia-Opening_mastering_demo.mp3"
     }
   ]
 }
