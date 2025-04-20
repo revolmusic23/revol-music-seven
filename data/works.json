@@ -105,6 +105,36 @@
       "image": "till-the-end.jpeg",
       "music": "做到底_MMM.mp3",
       "inst": "做到底_MMO.mp3"
+    },
+    {
+      "title": "Unique Life",
+      "date": "2021-05-14",
+      "participate": "參與編曲",
+      "description": "排球賽主題曲",
+      "slug": "unique-life",
+      "dataPath": "/works/20210514-unique-life",
+      "image": "unique-life.jpg",
+      "music": "Unique-Life_mastering.mp3",
+      "ytid": "uttQLpM2Vqo"
+    },
+    {
+      "title": "USB 隨行樂團 - 你會不會喜歡我現在的模樣",
+      "date": "2020-02-24",
+      "participate": "參與編曲",
+      "slug": "do-you-like-my-appearance",
+      "dataPath": "/works/20200224-你會不會喜歡我現在的模樣",
+      "image": "do-you-like-my-appearance.jpg",
+      "music": "你會不會喜歡我現在的模樣_mastering.mp3"
+    },
+    {
+      "title": "USB 隨行樂團 - 這一次",
+      "date": "2019-11-09",
+      "participate": "參與編曲",
+      "description": "伊甸 CRPD 五週年",
+      "slug": "this-time",
+      "dataPath": "/works/20191109-這一次",
+      "image": "this-time.jpg",
+      "music": "這一次_mastering.mp3"
     }
   ]
 }
