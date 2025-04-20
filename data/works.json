@@ -1,0 +1,41 @@
+{
+  "work": [
+    {
+      "title": "Camego Band - 同在同行",
+      "date": "2022-12-12",
+      "participate": "參與編曲、混音、電吉他錄音、弦樂編寫",
+      "slug": "be-together",
+      "type": ["rock"],
+      "dataPath": "/works/20221212-同在同行",
+      "image": "be-together-mv.jpeg",
+      "music": "20221212_同在同行_MMM.mp3",
+      "inst": "20221212_同在同行_MMA.mp3",
+      "lyrics": "同在同行歌詞.md",
+      "ytid": "IzLsb9uewec"
+    },
+    {
+      "title": "Camego Band - 唯有感激",
+      "slug": "gratefulness-awakened",
+      "date": "2022-09-11",
+      "participate": "參與編曲、混音、電吉他錄音",
+      "dataPath": "/works/20220911-唯有感激",
+      "image": "gratefulness-awakened.jpg",
+      "music": "唯有感激-MMM.mp3",
+      "inst": "唯有感激-MMA.mp3",
+      "lyrics": "唯有感激歌詞.md",
+      "ytid": "1FvXbd6BGD8"
+    },
+    {
+      "title": "Camego Band - Be a Hero",
+      "date": "2023-03-15",
+      "participate": "參與編曲、混音、電吉他錄音",
+      "slug": "be-a-hero",
+      "dataPath": "/works/20230315-be-a-hero",
+      "image": "be-a-hero.jpg",
+      "music": "Be-a-Hero_MMM.mp3",
+      "inst": "Be-a-Hero_MMA.mp3",
+      "lyrics": "be-a-hero_歌詞.md",
+      "ytid": "IfcPsiGd7ac"
+    }
+  ]
+}

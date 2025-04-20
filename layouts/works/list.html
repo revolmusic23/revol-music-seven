@@ -19,7 +19,8 @@
           <span class="h-px w-full max-w-4xl bg-gray-300 dark:bg-gray-600"></span>
         </div>
       {{ end }}
-      {{ range .Paginator.Pages }}
+
+      {{ range .Site.Data.works.work }}
         {{ partial "works_li_page.html" . }}
       {{ end }}
     </ul>
