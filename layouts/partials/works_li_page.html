@@ -5,28 +5,35 @@
       x-show="isLoaded"
       x-cloak
       class="group h-full animate-slideTop overflow-hidden rounded-md bg-white/50 shadow-[0_7px_29px_0_rgba(100,100,111,0.2)] backdrop-blur-md transition hover:shadow-md dark:bg-gray-800/70 dark:shadow-[0_5px_15px_rgba(0,0,0,0.35)]">
-      <div class="aspect-square w-full overflow-hidden">
-        {{ if .image }}
-          <div x-show="!isLoaded" x-cloak class="h-full w-full bg-transparent"></div>
-          <img
-            x-show="isLoaded"
-            x-cloak
-            src="{{ .dataPath }}/{{ .image }}"
-            alt="{{ .title }}"
-            loading="lazy"
-            decoding="async"
-            class="h-full w-full object-cover" />
-        {{ end }}
-      </div>
-      <div class="px-4 py-6 sm:p-6">
-        <p class="hs-content-title text-lg font-semibold text-center text-gray-900 group-hover:text-[--hs-text-color-hover] dark:text-gray-300">
-          {{ .title }}
-        </p>
-        {{ if .participate }}
-          <p class="mt-2 text-sm text-center text-gray-600 dark:text-gray-400">
-            {{ .participate }}
+      <!-- 在移動設備上使用 flex 佈局，普通屏幕上保持垂直佈局 -->
+      <div class="flex flex-row md:flex-col p-4 md:p-0">
+        <!-- 圖片部分 - 在移動設備上佔一半寬度 -->
+        <div class="w-1/3 md:w-full overflow-hidden flex items-center md:border-b-2">
+          {{ if .image }}
+            <div x-show="!isLoaded" x-cloak class="h-full w-full bg-transparent"></div>
+            <div class="aspect-square w-full">
+              <img
+                x-show="isLoaded"
+                x-cloak
+                src="{{ .dataPath }}/{{ .image }}"
+                alt="{{ .title }}"
+                loading="lazy"
+                decoding="async"
+                class="h-full w-full object-cover" />
+            </div>
+          {{ end }}
+        </div>
+        <!-- 文字部分 - 在移動設備上佔另一半寬度，並垂直居中 -->
+        <div class="w-2/3 md:w-full px-4 py-4 sm:py-0 flex flex-col justify-center md:py-4">
+          <p class="hs-content-title text-lg font-semibold text-left md:text-center text-gray-900 group-hover:text-[--hs-text-color-hover] dark:text-gray-300">
+            {{ .title }}
           </p>
-        {{ end }}
+          {{ if .participate }}
+            <p class="mt-2 text-sm text-left md:text-center text-gray-600 dark:text-gray-400">
+              {{ .participate }}
+            </p>
+          {{ end }}
+        </div>
       </div>
     </div>
   </a>

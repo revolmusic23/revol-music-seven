@@ -48,14 +48,35 @@
       "lyrics": "勇敢的冒險-歌詞.md"
     },
     {
+      "title": "My Sea",
+      "date": "2023-02-17",
+      "participate": "參與編曲、混音、電吉他、弦樂編寫",
+      "slug": "my-sea",
+      "dataPath": "/works/20230217-是我的海",
+      "image": "my-sea.png",
+      "inst": "是我的海_mastering_v1.0.mp3"
+    },
+    {
       "title": "Go Ahead",
       "date": "2023-07-15",
       "participate": "參與編曲、混音、電吉他錄音",
+      "description": "高中營隊主題曲",
       "slug": "go-ahead",
       "dataPath": "/works/20230715-go-ahead",
       "image": "go-ahead.png",
       "music": "Go-Ahead_mastering_v1.1.mp3",
       "inst": "Go-Ahead_mastering_v1.1_inst.mp3"
+    },
+    {
+      "title": "Camego Band - Yes We CAM!",
+      "date": "2022-04-30",
+      "participate": "參與編曲、電吉他錄音",
+      "slug": "yes-we-cam",
+      "dataPath": "/works/20220430-yes-we-cam",
+      "image": "yes-we-cam.jpg",
+      "music": "Yes-We-CAM_MMM.mp3",
+      "ytid": "5FVS-2F396A",
+      "lyrics": "yes-we-cam-歌詞.md"
     },
     {
       "title": "Zootopia Opening (Demo)",
@@ -65,6 +86,25 @@
       "dataPath": "/works/20220903-zootopia",
       "image": "zootopia.png",
       "music": "Zootopia-Opening_mastering_demo.mp3"
+    },
+    {
+      "title": "Afternoon Daydreaming",
+      "date": "2023-03-06",
+      "participate": "參與鋼琴編曲",
+      "slug": "afternoon-daydreaming",
+      "dataPath": "/works/20230306-afternoon-daydreaming",
+      "image": "afternoon-daydreaming.png",
+      "music": "20221203_彤彤畢展音樂-piano.mp3"
+    },
+    {
+      "title": "H.I.M. - 做到底",
+      "date": "2020-09-28",
+      "participate": "參與編曲、MIDI 電吉他",
+      "slug": "till-the-end",
+      "dataPath": "/works/20200928-做到底",
+      "image": "till-the-end.jpeg",
+      "music": "做到底_MMM.mp3",
+      "inst": "做到底_MMO.mp3"
     }
   ]
 }

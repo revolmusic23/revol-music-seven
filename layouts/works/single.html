@@ -42,6 +42,7 @@
   {{ $dataPath := .Params.dataPath }}
   {{ $image := .Params.image }}
   {{ $participate := .Params.participate }}
+  {{ $description := .Params.description }}
   {{ $music := .Params.music }}
   {{ $inst := .Params.inst }}
   {{ $lyrics := .Params.lyrics }}
@@ -53,6 +54,7 @@
     {{ $dataPath = $workData.dataPath }}
     {{ $image = $workData.image }}
     {{ $participate = $workData.participate }}
+    {{ $description = $workData.description }}
     {{ $music = $workData.music }}
     {{ $inst = $workData.inst }}
     {{ $lyrics = $workData.lyrics }}
@@ -67,7 +69,7 @@
       <div class="w-2/3 md:w-1/3 mx-auto md:mx-0 mb-8 md:mb-0">
         <div class="{{ .Site.Params.styles.cardClass }} p-4 top-0 sticky">
           {{ if $image }}
-            <div id="hs-feature" class="aspect-square w-full">
+            <div id="hs-feature" class="aspect-square w-full border-b-2">
               <img class="w-full object-cover" src="{{ $dataPath }}/{{ $image }}" alt="Hero Image of content" srcset="" />
             </div>
           {{ else }}
@@ -80,6 +82,10 @@
           <div class="mt-4 text-sm font-light tracking-wide text-gray-500/90 dark:text-gray-400">
             <span>{{ $date.Format "2006-01-02" }}</span>
           </div>
+
+          <p class="mt-2 text-md text-gray-500 dark:text-gray-400">
+            {{ $participate }}
+          </p>
         </div>
       </div>
 
@@ -91,9 +97,11 @@
               {{ $title }}
             </div>
 
-            <p class="mt-2 text-md text-gray-500 dark:text-gray-400">
-              {{ $participate }}
-            </p>
+            {{ if $description }}
+              <p class="mt-2 text-md text-gray-500 dark:text-gray-400">
+                {{ $description }}
+              </p>
+            {{ end }}
           </div>
 
           <div
