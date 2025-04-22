@@ -79,6 +79,15 @@
       "lyrics": "yes-we-cam-歌詞.md"
     },
     {
+      "title": "同在同行（Piano ver.）",
+      "date": "2023-03-06",
+      "participate": "參與鋼琴編曲",
+      "slug": "be-together-piano",
+      "dataPath": "/works/20230306-同在同行-piano",
+      "image": "be-together-piano.png",
+      "music": "同在同行-piano-ver.mp3"
+    },
+    {
       "title": "Zootopia Opening (Demo)",
       "date": "2022-09-03",
       "participate": "參與編曲、混音、電吉他錄音",
@@ -91,6 +100,7 @@
       "title": "Afternoon Daydreaming",
       "date": "2023-03-06",
       "participate": "參與鋼琴編曲",
+      "description": "畢展配樂案子",
       "slug": "afternoon-daydreaming",
       "dataPath": "/works/20230306-afternoon-daydreaming",
       "image": "afternoon-daydreaming.png",
@@ -107,6 +117,16 @@
       "inst": "做到底_MMO.mp3"
     },
     {
+      "title": "為了誰而來（Acoustic ver.）",
+      "date": "2019-11-30",
+      "participate": "參與編曲、混音",
+      "slug": "for-whom-acoustic",
+      "dataPath": "/works/20191130-為了誰而來-acoustic",
+      "image": "for-whom-acoustic.png",
+      "music": "為了誰而來-acoustic-ver.mp3",
+      "inst": "為了誰而來-acoustic-ver_inst.mp3"
+    },
+    {
       "title": "Unique Life",
       "date": "2021-05-14",
       "participate": "參與編曲",
@@ -116,6 +136,26 @@
       "image": "unique-life.jpg",
       "music": "Unique-Life_mastering.mp3",
       "ytid": "uttQLpM2Vqo"
+    },
+    {
+      "title": "帥氣地過生活吧（Acoustic ver.）",
+      "date": "2019-12-21",
+      "participate": "參與編曲",
+      "description": "現場表演的示意 Demo",
+      "slug": "handsome-life-acoustic",
+      "dataPath": "/works/20191221-帥氣地過生活吧-acoustic",
+      "image": "handsome-life-acoustic.png",
+      "music": "帥氣地過生活吧-acoustic-ver.mp3"
+    },
+    {
+      "title": "卡其樂團（Demo）",
+      "date": "2019-12-21",
+      "participate": "參與編曲",
+      "description": "現場表演的示意 Demo",
+      "slug": "khaki-band",
+      "dataPath": "/works/20191221-卡其樂團",
+      "image": "khaki-band.png",
+      "music": "卡其樂團_demo.mp3"
     },
     {
       "title": "USB 隨行樂團 - 你會不會喜歡我現在的模樣",
