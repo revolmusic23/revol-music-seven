@@ -1,0 +1,10 @@
+{{ $imgPath := .Page.Params.imgPath }}
+{{ $src := printf "%s/%s" $imgPath (.Get "src") }}
+{{ $caption := .Get "caption" | default "" }}
+
+{{ with $src }}
+  <figure>
+    <img src="{{ . }}" alt="{{ $caption }}" />
+    {{ with $caption }}<figcaption>{{ . }}</figcaption>{{ end }}
+  </figure>
+{{ end }}
