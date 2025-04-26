@@ -19,7 +19,17 @@
           <span class="h-px w-full max-w-4xl bg-gray-300 dark:bg-gray-600"></span>
         </div>
       {{ end }}
-      {{ range .Paginator.Pages }}
+      {{ $pages := slice }}
+      {{ if eq .Kind "home" }}
+        <!-- 首頁：顯示所有 posts 類型的頁面 -->
+        {{ $pages = where .Site.RegularPages "Type" "posts" }}
+      {{ else }}
+        <!-- 其他列表頁：使用當前頁面的子頁面 -->
+        {{ $pages = .RegularPages }}
+      {{ end }}
+
+      {{ $paginator := .Paginate $pages }}
+      {{ range $paginator.Pages }}
         {{ partial "li_page.html" . }}
       {{ end }}
     </ul>

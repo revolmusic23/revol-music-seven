@@ -1,15 +1,18 @@
 # [[main]]
-#   name = "文檔"
-#   pageRef = "docs"
+#   name = "文章"
 #   weight = 10
+# [[main]]
+#   identifier = "posts"
+#   parent = '文章'
+#   name = "Posts"
+#   pageRef = "posts"
+#   weight = 20
 [[main]]
-  name = "Posts"
-  pageRef = "posts"
-  weight = 20
-[[main]]
-  name = "Archive"
+  identifier = "archive"
+  name = "文章庫"
   pageRef = "archive"
   weight = 30
+
 [[main]]
   name = "作品"
   pageRef = "works"
