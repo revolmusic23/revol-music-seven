@@ -48,20 +48,17 @@
 
 [follow]
   [follow.email]
-    enable = false
-    url = ""
-  [follow.github]
     enable = true
-    url = "https://github.com/mrhelloboy/seven"
-  [follow.x]
+    url = "revolcc@proton.me"
+  [follow.youtube]
     enable = true
-    url = ""
-  [follow.wechat]
+    url = "https://www.youtube.com/@revol8546"
+  [follow.streetvoice]
     enable = true
-    QRCodeUrl = "/images/society/wechat/wechat.jpg"
+    url = "https://streetvoice.com/revol0730/"
 
 [copyright]
-  owner = "Seven"
+  owner = "雷歐 Revol"
   startYear = "2023"
 
 [articleMeta]
