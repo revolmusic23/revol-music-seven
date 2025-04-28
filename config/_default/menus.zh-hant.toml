@@ -8,6 +8,12 @@
 #   pageRef = "posts"
 #   weight = 20
 [[main]]
+  identifier = "about"
+  name = "關於我"
+  pageRef = "about"
+  weight = 20
+
+[[main]]
   identifier = "archive"
   name = "文章庫"
   pageRef = "archive"
