@@ -13,7 +13,7 @@
   noFavicon = false
 
   # modern SVG favicon to use in place of older style .png and .ico files
-  svgFavicon = "/favicon.svg"
+  svgFavicon = "/logo.png"
 
   # Safari mask icon color
   iconColor = "#ffffff"
@@ -32,12 +32,12 @@
 [logo]
   # Image logo or Text logo
   # Recommended to set image as logo. (prefer)
-  img = "/images/logo.svg"
-  img_dark = "/images/logo-footer.svg"
+  img = "/logo.png"
+  img_dark = "/logo.png"
 
   # Max height not greater than 56 (px). default: 56 (px)
   customLogoHeight = "56"
-  customLogoWidth = "120"
+  customLogoWidth = "56"
   text = ""
 
 [home]
