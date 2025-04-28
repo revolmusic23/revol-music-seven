@@ -18,7 +18,7 @@
   {{ end }}
 
   {{ if and (eq $name "streetvoice") (eq $value.enable true) }}
-    <a href="{{ $value.url }}" class="size-4 grayscale" target="_blank">
+    <a href="{{ $value.url }}" class="size-4 grayscale hover:grayscale-0" target="_blank">
       <img src="/streetvoice.ico" alt="" />
     </a>
   {{ end }}

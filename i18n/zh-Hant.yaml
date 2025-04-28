@@ -1,0 +1,23 @@
+readmore: "閱讀更多"
+summary: "摘要"
+
+article:
+  words: "字"
+  minutes: "分鐘"
+  visits: "閱讀量"
+  comments: "評論數"
+
+toc:
+  title: "目錄"
+  mobile_title: "目錄"
+
+search:
+  placeholder: "請搜尋內容"
+  no_result: "找不到搜尋內容"
+  error: "喔不！發生了錯誤 ..."
+  cancel: "按 ESC 取消"
+  powered_by: "由  {{ .Name }}  提供支持"
+
+footer:
+  powered_by: "由{{ .Hugo }} & {{ .Theme }}提供支持"
+  copyright: "版權所有"
