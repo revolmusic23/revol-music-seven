@@ -106,7 +106,6 @@
     # see: https://www.algolia.com/doc/api-reference/widgets/snippet/js/#about
     snippet_attr = "description"
 
-    # see: https://www.algolia.com/doc/api-reference/widgets/highlight/js/#examples
     highlight_attr = "title"
 
 [analytics]
