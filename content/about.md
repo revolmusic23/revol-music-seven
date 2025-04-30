@@ -1,6 +1,7 @@
 ---
 title: 關於我
 image: "/profile-piano.jpeg"
+layout: "single"
 ---
 
 哈囉，我是雷歐，歡迎來到我的音樂網站。
