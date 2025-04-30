@@ -3,8 +3,7 @@
   {{ with .Site.Params.home.showContentTypes }}
     {{ $allPages = where $allPages "Type" "in" . }}
   {{ end }}
-  {{ $lastestPosts := first 5 (where $allPages "IsPage" true) }}
-  {{ $lastestPostsLen := len $lastestPosts }}
+  {{ $lastestPosts := first 5 $allPages }}
 
 
   <section x-data="{ loadNum: 1 }" class="mx-auto flex w-full max-w-250">
