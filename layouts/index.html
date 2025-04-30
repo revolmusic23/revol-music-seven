@@ -1,5 +1,5 @@
 {{ define "main" }}
-  {{ $allPages := .Site.Pages }}
+  {{ $allPages := where .Site.RegularPages "Section" "posts" }}
   {{ with .Site.Params.home.showContentTypes }}
     {{ $allPages = where $allPages "Type" "in" . }}
   {{ end }}
