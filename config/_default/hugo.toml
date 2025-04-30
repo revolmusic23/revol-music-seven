@@ -1,4 +1,4 @@
-baseURL = "https://revolmusic.me/"
+baseURL = "https://www.revolmusic.me/"
 
 hasCJKLanguage = true
 defaultContentLanguage = "zh-hant"
