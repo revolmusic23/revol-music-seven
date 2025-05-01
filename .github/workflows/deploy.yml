@@ -36,8 +36,14 @@ jobs:
       - name: Setup Hugo
         uses: peaceiris/actions-hugo@v2
         with:
-          hugo-version: "latest"
+          hugo-version: "0.142.0"
           extended: true
+
+      - name: Clean public directory
+        run: rm -rf public
+
+      - name: Build
+        run: hugo --minify --gc
 
       - name: Build
         run: hugo --minify --gc
