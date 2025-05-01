@@ -12,8 +12,8 @@
   {{ end }}
 
   {{ if and (eq $name "youtube") (eq $value.enable true) }}
-    <a href="{{ $value.url }}" class="size-4" target="_blank">
-      <img src="/brand-youtube.svg" alt="" />
+    <a href="{{ $value.url }}" class="size-4 grayscale hover:grayscale-0" target="_blank">
+      <img src="/youtube.ico" alt="" />
     </a>
   {{ end }}
 
